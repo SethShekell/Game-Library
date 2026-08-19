@@ -31,7 +31,16 @@ class Game:
             * set_completion()
     '''
     # Constructor to initialize all attributes (Uses default values to account for partial entries)
-    def __init__(self, name, year_released, genre, hours_played = 0, platform = None, rating = None, completion = Status.BACKLOG):
+    def __init__(
+            self,
+            name: str,
+            year_released: int,
+            genre: str,
+            hours_played: float = 0,
+            platform: str = None,
+            rating: float = None,
+            completion: Status = Status.BACKLOG
+    ):
         self.name = name
         self.year_released = year_released
         self.genre = genre
